@@ -20,6 +20,8 @@
 		782542BE205CB3AD00C509C1 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		782542C0205CB45F00C509C1 /* ZMIOUSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMIOUSB.swift; sourceTree = "<group>"; };
 		782542C2205CB4C000C509C1 /* Observing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observing.swift; sourceTree = "<group>"; };
+		782542C4205CBE5700C509C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		782542C5205CBE5700C509C1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,8 @@
 		782542A5205CB2A200C509C1 = {
 			isa = PBXGroup;
 			children = (
+				782542C5205CBE5700C509C1 /* LICENSE */,
+				782542C4205CBE5700C509C1 /* README.md */,
 				782542B1205CB2A200C509C1 /* ZMIOUSB */,
 				782542B0205CB2A200C509C1 /* Products */,
 			);
