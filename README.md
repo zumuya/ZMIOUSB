@@ -93,8 +93,8 @@ let observer = try USBDeviceInterface.observeDeviceList(vendorIdentifier: VENDOR
 		
 			let deviceInterface = try USBDeviceInterface.create(service: service)
 			defer { deviceInterface.release() }
-			...
 			
+			...
 		case kIOTerminatedNotification:
 			print("device is disconnected!")
 			
@@ -134,7 +134,7 @@ if (ioReturn != .success) {
 
 ### Throwing with method
 
-By using `IOReturn.throwIfNotSuccess()` method, you can call existing functions with `try` keyword.
+By using `IOReturn.throwIfNotSuccess()` method, you can call existing functions with `try` keyword.
 
 ```swift
 try interfaceInterface.pointee?.pointee.ResetPipe(interfaceInterface, 1).throwIfNotSuccess()
