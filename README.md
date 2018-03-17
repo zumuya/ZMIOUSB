@@ -26,7 +26,7 @@ defer { deviceInterface.release() }
 let interfaceInterface = try deviceInterface.createInterfaceInterface()
 defer { interfaceInterface.release() }
 ```
-You must call `release()` after using interfaces. We recommend to use `defer {}` since many functions in this framework throw errors.
+If you create interfaces, you must call `release()` after using them. We recommend to use `defer {}` since many functions in this framework throw errors.
 
 ### Opening & closing devices
 
