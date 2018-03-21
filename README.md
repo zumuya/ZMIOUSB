@@ -17,7 +17,7 @@ github "zumuya/ZMIOUSB"
 
 ## General usage
 
-### Getting the device interface and interface interface
+### Getting interfaces
 
 ```swift
 let deviceInterface = try USBDeviceInterface.create(vendorIdentifier: VENDOR_ID, productIdentifier: PRODUCT_ID)
@@ -28,7 +28,7 @@ defer { interfaceInterface.release() }
 ```
 If you create interfaces, you must call `release()` after using them. We recommend to use `defer {}` since many functions in this framework throw errors.
 
-### Opening & closing devices
+### Opening & closing interfaces
 
 ```swift
 try deviceInterface.openAndPerform {
