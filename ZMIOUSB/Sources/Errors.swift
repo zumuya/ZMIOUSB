@@ -38,7 +38,7 @@ public enum ZMIOError: Int, LocalizedError
 	case couldNotQueryUsbInterfaceInterface
 	case couldNotGetEnoughData
 	
-	public static var localizedDescriptionHandlers: [((ZMIOError) -> String?)] = []
+	public static var errorDescriptionHandlers: [((ZMIOError) -> String?)] = []
 	public static var recoverySuggestionHandlers: [((ZMIOError) -> String?)] = []
 	
 	public var recoverySuggestion: String?
@@ -53,9 +53,9 @@ public enum ZMIOError: Int, LocalizedError
 	
 	public var errorDescription: String?
 	{
-		for localizedDescriptionHandler in ZMIOError.localizedDescriptionHandlers {
-			if let localizedDescription = localizedDescriptionHandler(self) {
-				return localizedDescription
+		for errorDescriptionHandler in ZMIOError.errorDescriptionHandlers {
+			if let errorDescription = errorDescriptionHandler(self) {
+				return errorDescription
 			}
 		}
 		switch self {
@@ -174,7 +174,7 @@ extension IOReturn: LocalizedError
 	public static let usbInvalidSsEndpoint = kIOUSBInvalidSSEndpoint
 	public static let usbTooManyTransactionsPending = kIOUSBTooManyTransactionsPending
 	
-	public static var localizedDescriptionHandlers: [((IOReturn) -> String?)] = []
+	public static var errorDescriptionHandlers: [((IOReturn) -> String?)] = []
 	public static var recoverySuggestionHandlers: [((IOReturn) -> String?)] = []
 	
 	public var recoverySuggestion: String?
@@ -189,9 +189,9 @@ extension IOReturn: LocalizedError
 	
 	public var errorDescription: String?
 	{
-		for localizedDescriptionHandler in IOReturn.localizedDescriptionHandlers {
-			if let localizedDescription = localizedDescriptionHandler(self) {
-				return localizedDescription
+		for errorDescriptionHandler in IOReturn.errorDescriptionHandlers {
+			if let errorDescription = errorDescriptionHandler(self) {
+				return errorDescription
 			}
 		}
 		switch self {

@@ -145,7 +145,7 @@ try interfaceInterface.pointee?.pointee.ResetPipe(interfaceInterface, 1).throwIf
 This framework doesn't contain any localization for error messages. But you can provide and customize messages.
 
 ```swift
-IOReturn.localizedDescriptionHandlers.append { error in
+IOReturn.errorDescriptionHandlers.append { error in
 	NSLocalizedString(String(format: "IOReturn_description_%i", error.rawValue), comment: "")
 }
 IOReturn.recoverySuggestionHandlers.append { error in
