@@ -99,7 +99,7 @@ extension IOReturn: LocalizedError
 	public static let aborted = kIOReturnAborted
 	public static let badArgument = kIOReturnBadArgument
 	public static let badMedia = kIOReturnBadMedia
-	public static let badMessageID = kIOReturnBadMessageID
+	public static let badMessageId = kIOReturnBadMessageID
 	public static let busy = kIOReturnBusy
 	public static let cannotLock = kIOReturnCannotLock
 	public static let cannotWire = kIOReturnCannotWire
@@ -163,7 +163,7 @@ extension IOReturn: LocalizedError
 	public static let usbLowLatencyBufferNotPreviouslyAllocated = kIOUSBLowLatencyBufferNotPreviouslyAllocated
 	public static let usbLowLatencyFrameListNotPreviouslyAllocated = kIOUSBLowLatencyFrameListNotPreviouslyAllocated
 	public static let usbHighSpeedSplit = kIOUSBHighSpeedSplitError
-	public static let usbSyncRequestOnWLThread = kIOUSBSyncRequestOnWLThread
+	public static let usbSyncRequestOnWlThread = kIOUSBSyncRequestOnWLThread
 	public static let usbDeviceNotHighSpeed = kIOUSBDeviceNotHighSpeed
 	public static let usbDeviceTransferredToCompanion = kIOUSBDeviceTransferredToCompanion
 	public static let usbClearPipeStallNotRecursive  = kIOUSBClearPipeStallNotRecursive
@@ -171,7 +171,7 @@ extension IOReturn: LocalizedError
 	public static let usbEndpointCountExceeded = kIOUSBEndpointCountExceeded
 	public static let usbDeviceCountExceeded = kIOUSBDeviceCountExceeded
 	public static let usbStreamsNotSupported = kIOUSBStreamsNotSupported
-	public static let usbInvalidSSEndpoint = kIOUSBInvalidSSEndpoint
+	public static let usbInvalidSsEndpoint = kIOUSBInvalidSSEndpoint
 	public static let usbTooManyTransactionsPending = kIOUSBTooManyTransactionsPending
 	
 	public static var localizedDescriptionHandlers: [((IOReturn) -> String?)] = []
@@ -201,7 +201,7 @@ extension IOReturn: LocalizedError
 			return "Invalid argument"
 		case .badMedia:
 			return "Media error"
-		case .badMessageID:
+		case .badMessageId:
 			return "Sent/received messages had different msg_id"
 		case .busy:
 			return "Device busy"
@@ -328,7 +328,7 @@ extension IOReturn: LocalizedError
 			return "Attempted to use user land low latency isoc calls w/out calling PrepareBuffer (on the frame list) first"
 		case .usbHighSpeedSplit:
 			return "Error to hub on high speed bus trying to do split transaction"
-		case .usbSyncRequestOnWLThread:
+		case .usbSyncRequestOnWlThread:
 			return "A synchronous USB request was made on the workloop thread (from a callback?).  Only async requests are permitted in that case"
 		case .usbDeviceNotHighSpeed:
 			return "Name is deprecated, see below"
@@ -344,7 +344,7 @@ extension IOReturn: LocalizedError
 			return "The device cannot be enumerated because the controller cannot support more devices"
 		case .usbStreamsNotSupported:
 			return "The request cannot be completed because the XHCI controller does not support streams"
-		case .usbInvalidSSEndpoint:
+		case .usbInvalidSsEndpoint:
 			return "An endpoint found in a SuperSpeed device is invalid (usually because there is no Endpoint Companion Descriptor)"
 		case .usbTooManyTransactionsPending:
 			return "The transaction cannot be submitted because it would exceed the allowed number of pending transactions"
