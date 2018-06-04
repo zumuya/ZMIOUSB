@@ -331,7 +331,7 @@ extension UnsafeMutablePointer where Pointee == UnsafeMutablePointer<USBInterfac
 		if let minCount = minCount, (readCount < minCount) {
 			throw ZMIOError.couldNotGetEnoughData
 		}
-		return [UInt8](buffer.prefix(through: min(maxCount, Int(readCount))))
+		return [UInt8](buffer.prefix(upTo: min(maxCount, Int(readCount))))
 	}
 	
 	//MARK: - Write
